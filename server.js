@@ -501,6 +501,18 @@ bot.command("help", function (msg, reply, next) {
     "message. This also allows you to edit the file, but you have to know how..."
   );
 });
+var express = require('express');
+var app     = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+//For avoidong Heroku $PORT error
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('App is running, server is listening on port ', app.get('port'));
+});
 
 // FIXME: add inline bot capabilities!
 // FIXME: possible feature: restrict chats to UIDs
