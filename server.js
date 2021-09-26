@@ -500,9 +500,6 @@ bot.command("help", function (msg, reply, next) {
     "You can also use /file &lt;file&gt; to display the contents of file as a text " +
     "message. This also allows you to edit the file, but you have to know how..."
   );
-});
-var express = require('express');
-var app     = express();
 
 app.set('port', (process.env.PORT || 5000));
 
