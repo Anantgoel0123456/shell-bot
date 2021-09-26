@@ -501,7 +501,7 @@ bot.command("help", function (msg, reply, next) {
     "message. This also allows you to edit the file, but you have to know how..."
   );
 
-app.set('port', (process.env.PORT || 5000));
+
 
 // FIXME: add inline bot capabilities!
 // FIXME: possible feature: restrict chats to UIDs
